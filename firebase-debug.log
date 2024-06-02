@@ -1,0 +1,83 @@
+[debug] [2023-01-26T11:26:58.946Z] ----------------------------------------------------------------------
+[debug] [2023-01-26T11:26:58.950Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anshu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-01-26T11:26:58.951Z] CLI Version:   11.18.0
+[debug] [2023-01-26T11:26:58.952Z] Platform:      win32
+[debug] [2023-01-26T11:26:58.952Z] Node Version:  v16.16.0
+[debug] [2023-01-26T11:26:58.954Z] Time:          Thu Jan 26 2023 16:56:58 GMT+0530 (India Standard Time)
+[debug] [2023-01-26T11:26:58.954Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-26T11:26:58.960Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-01-26T11:26:59.002Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-26T11:26:59.003Z] > authorizing via signed-in user (as2004181@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\anshu\Desktop\intro_to_react_Q4\food-community-project
+
+[debug] [2023-01-26T11:27:00.489Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-01-26T11:27:00.490Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-01-26T11:28:52.242Z] > refreshing access token with scopes: []
+[debug] [2023-01-26T11:28:52.244Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-26T11:28:52.244Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-26T11:28:52.876Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-01-26T11:28:52.876Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-26T11:28:52.896Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-01-26T11:28:52.896Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"anshuman-foodary","name":"anshuman-foodary"}
+[debug] [2023-01-26T11:28:55.291Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-01-26T11:28:55.291Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5679969647979003785"}
+[debug] [2023-01-26T11:28:55.294Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5679969647979003785 [none]
+[debug] [2023-01-26T11:28:57.490Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5679969647979003785 200
+[debug] [2023-01-26T11:28:57.490Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5679969647979003785 {"name":"operations/cp.5679969647979003785","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2023-01-26T11:28:57.996Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-01-26T11:28:57.997Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5679969647979003785 [none]
+[debug] [2023-01-26T11:29:00.225Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5679969647979003785 200
+[debug] [2023-01-26T11:29:00.225Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5679969647979003785 {"name":"operations/cp.5679969647979003785","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"322500384540","projectId":"anshuman-foodary","lifecycleState":"ACTIVE","name":"anshuman-foodary","createTime":"2023-01-26T11:29:05.871Z"}}
+[debug] [2023-01-26T11:29:00.228Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/anshuman-foodary:addFirebase [none]
+[debug] [2023-01-26T11:29:03.644Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/anshuman-foodary:addFirebase 200
+[debug] [2023-01-26T11:29:03.644Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/anshuman-foodary:addFirebase {"name":"operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj"}
+[debug] [2023-01-26T11:29:03.645Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj [none]
+[debug] [2023-01-26T11:29:05.264Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj 200
+[debug] [2023-01-26T11:29:05.265Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj {"name":"operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj"}
+[debug] [2023-01-26T11:29:05.768Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-01-26T11:29:05.769Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj [none]
+[debug] [2023-01-26T11:29:06.977Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj 200
+[debug] [2023-01-26T11:29:06.977Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj {"name":"operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj"}
+[debug] [2023-01-26T11:29:07.977Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-01-26T11:29:07.979Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj [none]
+[debug] [2023-01-26T11:29:09.207Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj 200
+[debug] [2023-01-26T11:29:09.207Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj {"name":"operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj"}
+[debug] [2023-01-26T11:29:11.214Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-01-26T11:29:11.216Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj [none]
+[debug] [2023-01-26T11:29:12.478Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj 200
+[debug] [2023-01-26T11:29:12.478Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj {"name":"operations/workflows/ZTZjMWI2NjUtM2EzOC00NzU3LWJjMjEtMzYwMTdjM2IzZDZj","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"anshuman-foodary","projectNumber":"322500384540","displayName":"anshuman-foodary","name":"projects/anshuman-foodary","resources":{"hostingSite":"anshuman-foodary"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: anshuman-foodary
+[info]    - Project Name: anshuman-foodary
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/anshuman-foodary/overview
+[info] i  Using project anshuman-foodary (anshuman-foodary) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
